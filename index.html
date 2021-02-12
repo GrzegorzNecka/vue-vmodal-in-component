@@ -1,0 +1,26 @@
+<html>
+
+<head>
+	<title>Inline editor</title>
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class="h-screen">
+
+<div id="app">
+  <my-checkbox v-model="checked" value="unchanged"></my-checkbox>{{checked}}
+</div>
+
+<template id="my_checkbox">
+<div>
+My value is {{value}} <br>
+  <input type="checkbox" :value="value" @change="$emit('change', !checked)">  
+  </div>
+</template>
+
+</body>
+
+</html>
+
+<!-- https://vuejs.org/v2/guide/components.html?#Passing-Data-to-Child-Components-with-Props -->
